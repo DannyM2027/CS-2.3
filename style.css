@@ -1,1 +1,25 @@
 
+.box {
+    margin: 30px;
+    background-color: aquamarine;
+    width: 150px;
+    height: 100px;
+}
+
+
+
+#rotate {
+    transform: rotate(90deg);
+}
+
+#scale {
+    transform: scale(0.8);
+}
+
+#skew {
+    transform: skew(23deg);
+}
+
+#translate {
+    transform: translate(200px, -61px);
+}
