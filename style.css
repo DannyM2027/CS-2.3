@@ -23,3 +23,46 @@
 #translate {
     transform: translate(200px, -61px);
 }
+
+
+/* Animation step #1
+define @keyframes for the animation sequence */
+
+@keyframes colorchange {
+    from {background-color: darkturquoise;}
+    to {background-color: lightsalmon;}
+}
+@keyframes colorchangesmooth {
+    0% {background-color: darkturquoise;}
+    50% {background-color: lightsalmon;}
+    100%{background-color: darkturquoise;}
+}
+
+/* Step 2 animation
+configure animation on an HTML element*/
+
+#animated-box {
+    background-color: darkorange;
+    width: 200px;
+    height: 200px;
+    animation-name: colorchangesmooth;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#animated-emoji {
+    font-size: 50px;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
