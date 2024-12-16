@@ -46,7 +46,7 @@ configure animation on an HTML element*/
     width: 200px;
     height: 200px;
     animation-name: colorchangesmooth;
-    animation-duration: 4s;
+    animation-duration: 2sec;
     animation-iteration-count: infinite;
 }
 
@@ -54,15 +54,26 @@ configure animation on an HTML element*/
     0% {
         transform: rotate(0deg);
     }
+    20% {
+        transform: matrix(0, 1, 1, 0, 0, 0);
+    }
+    50% {
+        scale: 8;
+    
+    }
+    75% {
+        transform: translate3d(10px, 100px);
+    }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg) translate(20px, 20px);
     }
 }
 
 #animated-emoji {
     font-size: 50px;
     animation-name: spin;
-    animation-duration: 2s;
+    animation-duration: 1000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    display: inline-block;
 }
